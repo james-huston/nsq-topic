@@ -1,0 +1,36 @@
+{
+  "name": "nsq-topic",
+  "version": "0.1.0",
+  "description": "Create and Delete NSQ topics from Node!",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require should --recursive tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/james-huston/nsq-topic.git"
+  },
+  "keywords": [
+    "NSQ",
+    "topic",
+    "delete",
+    "create"
+  ],
+  "author": "James Huston <james@jameshuston.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/james-huston/nsq-topic/issues"
+  },
+  "homepage": "https://github.com/james-huston/nsq-topic",
+  "dependencies": {
+    "batch": "^0.5.1",
+    "debug": "^2.1.0",
+    "nsq-delete-topic": "0.0.2",
+    "nsq-lookup": "0.0.1",
+    "superagent": "^0.20.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.1.0"
+  }
+}
