@@ -1,6 +1,6 @@
 {
   "name": "nsq-topic",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create and Delete NSQ topics from Node!",
   "main": "index.js",
   "scripts": {
