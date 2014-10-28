@@ -7,7 +7,8 @@ Create and delete NSQ topics from Node!
 
 Creating a topic is easy peasy. Just call the create method against your nsqd instance with the name of your topic and you are rocking and rolling.
 
-	var nsqd = 'localhost:4150';
+	// point it to the http port on your nsqd server
+	var nsqd = 'localhost:4151';
 	var nsqTopic = require('nsq-topic');
 	
 	nsqTopic.create(nsqd, 'myTestTopic', function (err) {
@@ -20,6 +21,7 @@ Delete topic functionality mirrors that of the NSQAdmin Go application. It first
 
 If the topic is not found on the lookupd server(s) then 
 
+	// point it to the http port on your lookupd server
 	var lookupd = ['localhost:4161'];
 	var nsqTopic = require('nsq-topic');
 	
