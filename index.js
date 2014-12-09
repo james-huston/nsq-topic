@@ -1,5 +1,5 @@
 
 module.exports = {
-  delete: require('nsq-delete-topic'),
+  delete: require('./lib/delete'),
   create: require('./lib/create')
 };
