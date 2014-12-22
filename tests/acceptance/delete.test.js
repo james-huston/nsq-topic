@@ -35,11 +35,15 @@ describe('nsq-delete-topic library', function () {
     }
 
     function cleanup(callback) {
-      deleteTopic(lookupdHost, topicName, function (err) {
-        if (err) return callback(err);
+      setTimeout(function () {
+        deleteTopic(lookupdHost, topicName, function (err) {
+          if (err) {
+            return callback(err);
+          }
 
-        assertDeleted(callback);
-      });
+          assertDeleted(callback);
+        });
+      }, 0);
     }
 
     beforeEach(function (done) {
@@ -56,7 +60,7 @@ describe('nsq-delete-topic library', function () {
       });
     });
 
-    it('should remove the topic from the nsqd server', function (done) {
+    it.only('should remove the topic from the nsqd server', function (done) {
       cleanup(done);
     });
 
